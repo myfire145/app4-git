@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Datos del alumno</title>
+  
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/tema4.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+  
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <!--  <script src="js/acciones.js"></script>  -->
+  <script src="phonegap.js"></script>
+  
+  <style>
+   #tipos {
+	   list-style:none;}
+	ul {
+		font-size:1.3em;}
+	ul li {
+		font-size: 1.5em;}
+	ol li {
+		font-size: 1.5em;}
+	#tipos img {
+		display:inline-block;}
+	p {
+		font-size: 1.3em;}
+  </style>
+  <script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+  </script>
+  
+  <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine2/style.css" />
+<script type="text/javascript" src="engine2/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+  
+ </head>
+ 
+ <body onLoad="MM_preloadImages('imagenes/aire1.jpg')">
+ 
+  <div data-role="page" id="Principal" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Contaminacion ambiental</h1>
+   </div>
+    <div data-role="collapsible" data-comtent-theme="false">
+    <h1>Baner conmemorativo:</h1>
+    <div>
+     <p>Contaminacion ¡ALTO!</p>
+     <br> 
+     <img src="imagenes/portada.jpg" width="465" height="332">
+    </div>
+    
+    </div>
+  <div>
+   <ul data-role="listview" data-theme="c" class="ui-listview ui-group-theme-b">
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+     <h2>Definicion</h2>
+     <p>¿Que es la contaminacion?</p>
+     </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+     <h2>Tipos</h2>
+     <p>Se muestran los tipos de contaminacion existentes</p>
+     </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+     <h2>Consecuencias</h2>
+     <p>Demostracion de las consecuencias de la contaminacion</p>
+     </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+     <h2>Reciclaje</h2>
+     <p>¿Que es? y clasificacion del reciclaje</p>
+     </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+     <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+     <h2>Medidas para combatirla</h2>
+     <p>Medidas para combatirla, aplicables a mi comunidad</p>
+     </a>
+    </li>
+   </ul>
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+    <div>
+     <h4>Aplicacion 4</h4>
+     <h4>Ari Sabethai Villa Salas</h4>
+    </div>
+   </div>
+  </div>
+  <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Definicion</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+     <ol>
+       <li>
+         <div>
+           <div>
+             <div><strong>1</strong>.</div>
+             <div>
+               <div>
+                 <div data-dobid="dfn">Acción de contaminar o contaminarse.</div>
+                 <div>"la contaminación atmosférica es uno de los problemas actuales con que se enfrentan las grandes ciudades"</div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </li>
+       <li>
+         <div>
+           <div>
+             <div><strong>2</strong>.</div>
+             <div>
+               <div>
+                 <div data-dobid="dfn">Efecto de contaminar o contaminarse.</div>
+                 <div>"la contaminación o polución del aire y el agua es la consecuencia inmediata de la industrialización y tecnificación de la vida"</div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </li>
+     </ol>
+     <p>&nbsp;</p>
+    </div>
+    
+    <div data-role="collapsible" data-content-theme="false">
+     <h1>Imagenes</h1>
+    <div>
+    <!--aqui va el visor-->
+    <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/agua.jpg" alt="agua" title="agua" id="wows1_0"/></li>
+		<li><img src="data1/images/aire.jpg" alt="aire" title="aire" id="wows1_1"/></li>
+		<li><img src="data1/images/agua1.jpg" alt="agua1" title="agua1" id="wows1_3"/></li>
+		<li><img src="data1/images/link.jpg" alt="link" title="link" id="wows1_4"/></li>
+		<li><img src="data1/images/aire1.jpg" alt="aire1" title="aire1" id="wows1_5"/></li>
+		<li><img src="data1/images/noconsu.jpg" alt="noconsu" title="noconsu" id="wows1_6"/></li>
+		<li><a href="http://wowslider.com"><img src="data1/images/salud.jpg" alt="wowslider.com" title="salud" id="wows1_7"/></a></li>
+		<li><img src="data1/images/calentamiento.jpg" alt="calentamiento" title="calentamiento" id="wows1_8"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="agua"><span><img src="data1/tooltips/agua.jpg" alt="agua"/>1</span></a>
+		<a href="#" title="aire"><span><img src="data1/tooltips/aire.jpg" alt="aire"/>2</span></a>
+		<a href="#" title="atenta"><span><img src="data1/tooltips/atenta.jpg" alt="atenta"/>3</span></a>
+		<a href="#" title="agua1"><span><img src="data1/tooltips/agua1.jpg" alt="agua1"/>4</span></a>
+		<a href="#" title="link"><span><img src="data1/tooltips/link.jpg" alt="link"/>5</span></a>
+		<a href="#" title="aire1"><span><img src="data1/tooltips/aire1.jpg" alt="aire1"/>6</span></a>
+		<a href="#" title="noconsu"><span><img src="data1/tooltips/noconsu.jpg" alt="noconsu"/>7</span></a>
+		<a href="#" title="salud"><span><img src="data1/tooltips/salud.jpg" alt="salud"/>8</span></a>
+		<a href="#" title="calentamiento"><span><img src="data1/tooltips/calentamiento.jpg" alt="calentamiento"/>9</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wowslider.com</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+    </div>
+   </div>
+    
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+     <h4>Aplicacion cuatro, ASVS</h4>
+ 
+   </div>
+  </div>
+  
+  
+  <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Tipos de contaminacion</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+     <ul id="tipos">
+       <li>Contaminación atmosférica.</li>
+      <p>La contaminación atmosférica o contaminación del aire, es la introducción de partículas, materiales o productos nocivos en la atmósfera de la Tierra. Esta introducción en el ambiente interior y exterior modifica las características naturales del aire y tiene impactos negativos en el medio ambiente y en los seres vivos, ya que la atmósfera es un complejo sistema natural de gases necesario para mantener la vida en el planeta.</p>
+      <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image17','','imagenes/agua1.jpg',0)"><img src="imagenes/agua.jpg" width="600" height="400" id="Image17"></a>
+      <li>Contaminación del suelo y del subsuelo</li>
+      <p>El <strong>suelo</strong> generalmente se contamina cuando se rompen tanques de almacenamiento subterráneo, aplicación de pesticidas, filtraciones del alcantarillado y pozos ciegos, o acumulación directa de productos industriales o radioactivos, la cual produce que los<strong>suelos</strong> se hagan infértiles</p>
+      <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image18','','imagenes/suelo1.jpg',0)"><img src="imagenes/suelo.jpg" width="450" height="304" id="Image18"></a>
+      <li>Contaminación visual</li>
+      <div>Cuando hablamos de contaminación generalmente viene a nuestra mente grandes cantidades de basura acumulada, las chimeneas de las fábricas vertiendo gases contaminantes a la atmósfera, o las aguas turbias de un río  en los cuales se vierten residuos. Sin embargo son varias las formas en que la contaminación se puede manifestar y todas son perjudiciales en algún sentido. En este artículo nos estaremos refiriendo a una de las menos conocidas, pero no por ello menos perjudicial, la <strong>contaminación visual</strong>.</div>
+      <div>Contaminación visual es todo aquello que afecte la <strong>estética visual</strong>  de un paisaje, causado un desequilibrio ya sea en la disposición de los componentes, colores, contrastes o en cualquier otro elemento que pueda ser molesto a la vista e incluso impactar directamente en la sensación de bienestar de la persona. Puede producirse tanto en paisajes rurales como urbanos y generalmente se produce como parte de la actividad humana que arrastra consigo sociedades consumistas y en constante avance tecnológico.</div>
+      <p>&nbsp;</p>
+      <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image21','','imagenes/aire1.jpg',1)"><img src="imagenes/aire.jpg" width="447" height="329" id="Image21"></a>
+      </p>
+      <p><a href="https://psicologiaymente.net/miscelanea/tipos-de-contaminacion">Para mas informacion:</a>
+      </p>
+      <p>&nbsp;</p>
+     </ul>
+    </div>
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+     <h4>Aplicacion cuatro, ASVS</h4>
+   </div>
+  </div>
+  
+  <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Consecuencias</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+    <ul align="left">
+     <li>Deterioro del planeta y escases de recursos</li>
+     <img src="imagenes/deterioro.jpg" width="60%" height="60%">
+     <li>Atenta contra la vida de plantas, animales y personas</li>
+     <img src="imagenes/atenta.jpg" width="60%" height="60%">
+     <li>Genera daños físicos en las personas</li>
+     <img src="imagenes/salud.jpg" width="60%" height="60%">
+     <li>Contamina el agua y los ecosistemas marinos</li>
+     <img src="imagenes/noconsu.jpg" width="60%" height="60%">
+     <li>En los suelos contaminados no se puede cultivar</li>
+     <img src="imagenes/siembra.jpg" width="60%" height="60%">
+     <li>Calentamiento global</li>
+     <img src="imagenes/calentamiento.jpg" width="68%" height="60%">
+    </ul>
+    </div>
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+     <h4>Aplicacion cuatro, ASVS</h4>
+   </div>
+  </div>
+  
+  <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Reciclaje, Tipos.</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+     <h2>Que es</h2>
+     <p> El reciclaje es un proceso cuyo objetivo es convertir desechos en nuevos productos o en materia para su posterior utilización.
+Gracias al reciclaje se previene el desuso de materiales potencialmente útiles, se reduce el consumo de nueva materia prima, además de reducir el uso de energía, la contaminación del aire (a través de la incineración) y del agua (a través de los vertederos), así como también disminuir las emisiones de gases de efecto invernadero en comparación con la producción de plásticos.
+El reciclaje es un componente clave en la reducción de desechos contemporáneos y es el segundo componente de las 3R («Reducir, Reciclar y Reutilizar»)..</p>
+     <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image20','','imagenes/reciclaje2.jpg',0)"><img src="imagenes/reciclaje.jpg" width="291" height="244" id="Image20"></a> 
+     </div>
+    <div>
+     <h2>TIPOS:</h2>
+     <ul align="left">
+      <li>Reciclaje mecánico</li>
+      <p>Este apartado responde a todas las técnicas y procesos que incluyen trabajo manual o ayudado por máquinas. Tromel, tamices, cribados.</p>
+      <li>Reciclaje químico</li>
+      <p>Incluye técnicas y procedimientos que implican cambios en la estructura química del material. Se busca la descomposición del polímero para la obtención de monómeros.</p>
+      <li>Reciclaje energético</li>
+      <p>En este apartado se trata del reciclaje de materiales cuyo fin es el aprovechamiento energético.
+Se trata de residuos que no pueden ser clasificados y recuperados, bien por imposibilidad técnica o económica, y en lugar de llevarlos a vertedero se aprovechan de esto modo.</p>
+      <li>Reciclaje biológico</li>
+      <p>Es toda operación de tratamiento que busca la degradación de toda la materia orgánica en presencia o en ausencia de oxígeno.</p>
+     </ul>
+     <div display="inline-block">
+      <img src="imagenes/meca.jpg" width="25%" height="30%"> <img src="imagenes/quimi.jpg" width="25%" height="30%"> <img src="imagenes/ener.jpg" width="25%" height="30%"> <img src="imagenes/biolo.jpg" width="24%" height="30%">
+     </div>
+    </div>
+    
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+     <h4>Aplicacion cuatro,ASVS</h4>
+   </div>
+  </div>
+  
+  
+  <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Medidas</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+     <ol align="left">
+      <li>Reciclar</li>
+      <li>Quitar/recoger basura del rio Cantarranas</li>
+      <li>Recoger las botellas ya sea de plastico como de vidrio</li>
+      <li>Consumir menos productos industrializados</li>
+      <li>Utilizar bolsas o instrumentos reutilizables en las compras</li>
+     </ol>
+     <div>
+      <!--otro visor-->
+      <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container2">
+<div class="ws_images"><ul>
+		<li><img src="data2/images/propia.png" alt="propia" title="propia" id="wows2_0"/></li>
+		<li><img src="data2/images/propia1.png" alt="propia1" title="propia1" id="wows2_1"/></li>
+		<li><img src="data2/images/propia2.png" alt="propia2" title="propia2" id="wows2_2"/></li>
+		<li><a href="http://wowslider.com"><img src="data2/images/propia3.png" alt="http://wowslider.com/" title="propia3" id="wows2_3"/></a></li>
+		<li><img src="data2/images/propia4.png" alt="propia4" title="propia4" id="wows2_4"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="propia"><span><img src="data2/tooltips/propia.png" alt="propia"/>1</span></a>
+		<a href="#" title="propia1"><span><img src="data2/tooltips/propia1.png" alt="propia1"/>2</span></a>
+		<a href="#" title="propia2"><span><img src="data2/tooltips/propia2.png" alt="propia2"/>3</span></a>
+		<a href="#" title="propia3"><span><img src="data2/tooltips/propia3.png" alt="propia3"/>4</span></a>
+		<a href="#" title="propia4"><span><img src="data2/tooltips/propia4.png" alt="propia4"/>5</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wowslider.com</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine2/wowslider.js"></script>
+<script type="text/javascript" src="engine2/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+     </div>
+    </div>
+   
+    <div data-role="collapsible" data-content-theme="false">
+     <h1>Mas informacion</h1>
+    <div>
+    <a href="https://contaminacionambiental.net/contaminacion-ambiental/" target="_self"><img src="imagenes/link.jpg" width="50%" height="50%"></a>
+    </div>
+   </div>
+    
+   </div>
+   <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+    <div>
+     <img src="res/android/mdpi.png" width="46" height="46">
+    </div>
+     <h4>Aplicacion cuatro, ASVS</h4>
+   </div>
+  </div>
+ </body>
+</html>
